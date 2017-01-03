@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="quickblox-android-sdk-messages-2.6.1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/AR_Chat_App/build/intermediates/exploded-aar/com.quickblox/quickblox-android-sdk-messages/2.6.1/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/AR_Chat_App/build/intermediates/exploded-aar/com.quickblox/quickblox-android-sdk-messages/2.6.1/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

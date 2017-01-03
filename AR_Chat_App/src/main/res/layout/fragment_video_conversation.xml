@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragmentOpponents"
+    style="@style/MatchParent"
+    android:background="@color/background_fragment_conversation">
+
+
+    <com.adnet.archat.QuickSample.view.OpenCV_RTCRemoteVideoView
+        android:id="@+id/remote_video_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+    <com.adnet.archat.QuickSample.view.OpenCV_RTCVideoView
+        android:id="@+id/local_video_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+    <ImageView
+        android:id="@+id/opencvImg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <include layout="@layout/view_outgoing_screen" />
+
+    <TextView
+        android:id="@+id/connectionStatusLocal"
+        style="@style/MatchWidth"
+        android:layout_marginBottom="@dimen/margin_very_small"
+        android:gravity="center_horizontal"
+        android:maxLength="13"
+        android:maxLines="1"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/white"
+        android:textStyle="normal|italic" />
+
+
+    <include
+        android:id="@+id/element_set_video_buttons"
+        layout="@layout/view_action_buttons_conversation_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/empty_stub"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/margin_common" />
+
+    <View
+        android:id="@+id/empty_stub"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true" />
+
+    <RelativeLayout
+        android:id="@+id/rlAnnotationCtrl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.adnet.archat.UI.DrawingView
+            android:id="@+id/drawingView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <ImageView
+            android:id="@+id/ivCloseAnnotation"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5dp"
+            android:background="@drawable/ic_btn_close_annotation"/>
+        <RelativeLayout
+            android:id="@+id/rlMarkCtrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5dp">
+            <ImageView
+                android:id="@+id/ivDrawBlack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_draw_black"/>
+            <ImageView
+                android:id="@+id/ivDrawBlue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ivDrawBlack"
+                android:layout_marginLeft="2dp"
+                android:background="@drawable/shape_draw_blue"/>
+            <ImageView
+                android:id="@+id/ivDrawRed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ivDrawBlack"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/shape_draw_red"/>
+            <ImageView
+                android:id="@+id/ivDrawGreen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ivDrawBlue"
+                android:layout_toRightOf="@+id/ivDrawRed"
+                android:layout_marginTop="2dp"
+                android:layout_marginLeft="2dp"
+                android:background="@drawable/shape_draw_green"/>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnUndo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:text="Unodo"
+            android:textSize="17sp"
+            android:textAllCaps="false"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="5dp"
+            android:layout_toLeftOf="@+id/btnReset"
+            android:background="@android:color/holo_blue_dark"/>
+
+        <Button
+            android:id="@+id/btnReset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:text="Reset"
+            android:textSize="17sp"
+            android:textAllCaps="false"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="5dp"
+            android:background="@android:color/holo_blue_dark"/>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="library-3.2.3">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/AR_Chat_App/build/intermediates/exploded-aar/com.navercorp.pulltorefresh/library/3.2.3/res" />
+      <root url="jar://$PROJECT_DIR$/AR_Chat_App/build/intermediates/exploded-aar/com.navercorp.pulltorefresh/library/3.2.3/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.navercorp.pulltorefresh/library/3.2.3/5cded472dce10bf66f0d9b4f0641d49b29800385/library-3.2.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

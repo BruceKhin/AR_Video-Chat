@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_root"
+    style="@style/MatchParent"
+    tools:ignore="ContentDescription">
+
+    <LinearLayout
+        style="@style/WrapContent"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:background="@drawable/ic_logo"/>
+        <com.devspark.robototextview.widget.RobotoTextView
+            android:id="@+id/text_splash_app_title"
+            style="@style/SplashAppTitleStyle"
+            tools:text="Video Chat With Annotations"/>
+
+        <com.devspark.robototextview.widget.RobotoTextView
+            android:id="@+id/text_splash_app_version"
+            style="@style/SplashAppVersionStyle"
+            android:layout_marginTop="20dp"
+            android:textSize="20sp"
+            tools:text="1.0.0" />
+    </LinearLayout>
+
+</RelativeLayout>

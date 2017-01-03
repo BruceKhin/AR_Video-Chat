@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cp_dialogView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center" >
+
+    <RelativeLayout
+        android:id="@+id/cp_viewContainer"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:clipToPadding="false"
+        android:padding="15dp"
+        android:background="@color/white_transparent_80">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="@android:color/black"
+            android:text="Select Camera for Annotation"/>
+        <RadioGroup
+            android:id="@+id/rdCameraType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTitle"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="30dp">
+            <RadioButton
+                android:id="@+id/rdMyCamera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="My Camera"
+                android:drawablePadding="9dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/custom_radio_btn"
+                android:textColor="@android:color/black"/>
+
+            <RadioButton
+                android:id="@+id/rdOpponentCamera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Opponent Camera"
+                android:drawablePadding="9dp"
+                android:button="@null"
+                android:layout_marginTop="15dp"
+                android:drawableLeft="@drawable/custom_radio_btn"
+                android:textColor="@android:color/black"/>
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tvBtnOK"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/holo_blue_light"
+            android:layout_below="@+id/rdCameraType"
+            android:layout_marginTop="20dp"
+            android:text="OK"
+            android:layout_alignParentRight="true"
+            android:textSize="25sp"
+            android:layout_marginRight="18dp"
+            android:textAllCaps="true"/>
+
+        <TextView
+            android:id="@+id/tvBtnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:layout_alignTop="@id/tvBtnOK"
+            android:layout_toLeftOf="@id/tvBtnOK"
+            android:layout_marginRight="23dp"
+            android:textSize="25sp"
+            android:text="Cancel"
+            android:textAllCaps="true"/>
+    </RelativeLayout>
+
+</FrameLayout>

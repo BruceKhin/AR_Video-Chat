@@ -1,0 +1,18 @@
+<component name="libraryTable">
+  <library name="quickblox-android-sdk-chat-2.6.1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/AR_Chat_App/build/intermediates/exploded-aar/com.quickblox/quickblox-android-sdk-chat/2.6.1/jars/libs/smack-im-4.1.6-SNAPSHOT.jar!/" />
+      <root url="jar://$PROJECT_DIR$/AR_Chat_App/build/intermediates/exploded-aar/com.quickblox/quickblox-android-sdk-chat/2.6.1/jars/libs/smack-resolver-minidns-4.1.6-SNAPSHOT.jar!/" />
+      <root url="jar://$PROJECT_DIR$/AR_Chat_App/build/intermediates/exploded-aar/com.quickblox/quickblox-android-sdk-chat/2.6.1/jars/libs/smack-experimental-4.1.6-SNAPSHOT.jar!/" />
+      <root url="jar://$PROJECT_DIR$/AR_Chat_App/build/intermediates/exploded-aar/com.quickblox/quickblox-android-sdk-chat/2.6.1/jars/libs/smack-extensions-4.1.6-SNAPSHOT.jar!/" />
+      <root url="jar://$PROJECT_DIR$/AR_Chat_App/build/intermediates/exploded-aar/com.quickblox/quickblox-android-sdk-chat/2.6.1/jars/libs/smack-android-4.1.6-SNAPSHOT.jar!/" />
+      <root url="file://$PROJECT_DIR$/AR_Chat_App/build/intermediates/exploded-aar/com.quickblox/quickblox-android-sdk-chat/2.6.1/res" />
+      <root url="jar://$PROJECT_DIR$/AR_Chat_App/build/intermediates/exploded-aar/com.quickblox/quickblox-android-sdk-chat/2.6.1/jars/libs/smack-core-4.1.6-SNAPSHOT.jar!/" />
+      <root url="jar://$PROJECT_DIR$/AR_Chat_App/build/intermediates/exploded-aar/com.quickblox/quickblox-android-sdk-chat/2.6.1/jars/libs/smack-sasl-provided-4.1.6-SNAPSHOT.jar!/" />
+      <root url="jar://$PROJECT_DIR$/AR_Chat_App/build/intermediates/exploded-aar/com.quickblox/quickblox-android-sdk-chat/2.6.1/jars/classes.jar!/" />
+      <root url="jar://$PROJECT_DIR$/AR_Chat_App/build/intermediates/exploded-aar/com.quickblox/quickblox-android-sdk-chat/2.6.1/jars/libs/smack-tcp-4.1.6-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

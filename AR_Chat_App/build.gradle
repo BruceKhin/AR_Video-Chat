@@ -1,0 +1,134 @@
+apply plugin: 'com.android.model.application'
+
+model {
+    android {
+        compileSdkVersion = 23
+        buildToolsVersion = "23.0.2"
+
+        defaultConfig.with {
+            applicationId = "com.adnet.archat"
+            minSdkVersion.apiLevel = 14
+            targetSdkVersion.apiLevel = 23
+        }
+    }
+
+    /*
+     * native build settings
+     */
+    android.ndk {
+        moduleName = "AR_Video_Track"
+        platformVersion = 19
+        cppFlags.add("-Werror")
+        cppFlags.add("--debug")
+        cppFlags.add("-frtti")
+        cppFlags.add("-fexceptions")
+        cppFlags.add("-std=c++11")
+        cppFlags.add("-I${file('F:\\My_Workspace\\Android\\OpenCV-3.1.0-android-sdk\\OpenCV-android-sdk\\sdk\\native\\jni\\include')}".toString())
+        cppFlags.add("-I${file('jni')}".toString())
+        ldLibs.addAll(["android", "log", "stdc++", "dl", "jnigraphics", "z", "EGL", "GLESv1_CM"])
+        stl = "gnustl_shared"
+        /*
+         * Other ndk flags configurable here are
+         * cppFlags.add("-fno-rtti")
+         * cppFlags.add("-fno-exceptions")
+         * ldLibs.addAll(["android", "log"])
+         * stl       = "system"
+         */
+    }
+    android.buildTypes {
+        release {
+            minifyEnabled = false
+            proguardFiles.add(file('proguard-rules.txt'))
+//            abiFilters "armabi-v7a", "armabi"
+        }
+    }
+    android.productFlavors {
+        // for detailed abiFilter descriptions, refer to "Supported ABIs" @
+        // https://developer.android.com/ndk/guides/abis.html#sa
+        create("arm") {
+            ndk.with{
+                abiFilters.add("armeabi")
+
+                File curDir = file('./')
+                curDir = file(curDir.absolutePath)
+                ldLibs.add(curDir.absolutePath + "/src/main/jniLibs/" + "armeabi" + "/libopencv_java3.so")
+            }
+        }
+        create("arm7") {
+            ndk.with{
+                abiFilters.add("armeabi-v7a")
+
+                File curDir = file('./')
+                curDir = file(curDir.absolutePath)
+                ldLibs.add(curDir.absolutePath + "/src/main/jniLibs/" + "armeabi-v7a" + "/libopencv_java3.so")
+            }
+        }
+        create("arm8") {
+            ndk.with{
+                abiFilters.add("arm64-v8a")
+
+                File curDir = file('./')
+                curDir = file(curDir.absolutePath)
+                ldLibs.add(curDir.absolutePath + "/src/main/jniLibs/" + "arm64-v8a" + "/libopencv_java3.so")
+            }
+        }
+        create("x86") {
+            ndk.with{
+                abiFilters.add("x86")
+
+                File curDir = file('./')
+                curDir = file(curDir.absolutePath)
+                ldLibs.add(curDir.absolutePath + "/src/main/jniLibs/" + "x86" + "/libopencv_java3.so")
+            }
+        }
+        create("x86-64") {
+            ndk.with{
+                abiFilters.add("x86_64")
+
+                File curDir = file('./')
+                curDir = file(curDir.absolutePath)
+                ldLibs.add(curDir.absolutePath + "/src/main/jniLibs/" + "x86_64" + "/libopencv_java3.so")
+            }
+        }
+        create("mips") {
+            ndk.with{
+                abiFilters.add("mips")
+
+                File curDir = file('./')
+                curDir = file(curDir.absolutePath)
+                ldLibs.add(curDir.absolutePath + "/src/main/jniLibs/" + "mips" + "/libopencv_java3.so")
+            }
+        }
+        create("mips-64") {
+            ndk.with{
+                abiFilters.add("mips64")
+
+                File curDir = file('./')
+                curDir = file(curDir.absolutePath)
+                ldLibs.add(curDir.absolutePath + "/src/main/jniLibs/" + "mips64" + "/libopencv_java3.so")
+            }
+        }
+        // To include all cpu architectures, leaves abiF   ilters empty
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:23.+'
+    compile "com.quickblox:quickblox-android-sdk-core:$rootProject.qbSdkVersion@aar"
+    compile ("com.quickblox:quickblox-android-sdk-chat:$rootProject.qbSdkVersion@aar") {
+        transitive=true
+    }
+    compile "com.quickblox:quickblox-android-sdk-videochat-webrtc:$rootProject.qbSdkVersion@aar"
+    compile ("com.quickblox:quickblox-android-sdk-messages:$rootProject.qbSdkVersion" )
+    compile 'com.navercorp.pulltorefresh:library:3.2.3@aar'
+
+    compile 'com.android.support:recyclerview-v7:23.1.1'
+    compile 'com.android.support:support-annotations:23.1.1'
+    compile 'com.firebase:firebase-client-android:2.5.2+'
+    compile "com.google.android.gms:play-services-gcm:${rootProject.playServicesVersion}"
+    compile "com.android.support:design:${rootProject.designVersion}"
+    compile "com.github.johnkil.android-robototextview:robototextview:${rootProject.robotoTextViewVersion}"
+    compile project(':openCVLibrary310')
+}
+apply plugin: 'com.google.gms.google-services'

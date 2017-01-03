@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="quickblox-android-sdk-videochat-webrtc-2.6.1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/AR_Chat_App/build/intermediates/exploded-aar/com.quickblox/quickblox-android-sdk-videochat-webrtc/2.6.1/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/AR_Chat_App/build/intermediates/exploded-aar/com.quickblox/quickblox-android-sdk-videochat-webrtc/2.6.1/res" />
+      <root url="jar://$PROJECT_DIR$/AR_Chat_App/build/intermediates/exploded-aar/com.quickblox/quickblox-android-sdk-videochat-webrtc/2.6.1/jars/libs/libjingle_peerconnection.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
